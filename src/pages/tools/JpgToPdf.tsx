@@ -50,7 +50,7 @@ const JpgToPdf = () => {
         page.drawImage(img, { x: 0, y: 0, width: img.width, height: img.height });
       }
       const out = await pdf.save();
-      const blob = new Blob([out], { type: "application/pdf" });
+      const blob = new Blob([out as BlobPart], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;

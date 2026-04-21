@@ -43,7 +43,7 @@ const MergePdf = () => {
         pages.forEach((p) => out.addPage(p));
       }
       const merged = await out.save();
-      const blob = new Blob([merged], { type: "application/pdf" });
+      const blob = new Blob([merged as BlobPart], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
