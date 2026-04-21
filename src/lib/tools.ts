@@ -28,33 +28,33 @@ export const categoryLabel: Record<ToolCategory, string> = {
 export const tools: Tool[] = [
   // Organize
   { slug: "merge-pdf", name: "Merge PDF", description: "Combine PDFs in the order you want.", icon: Combine, category: "organize", available: true },
-  { slug: "split-pdf", name: "Split PDF", description: "Separate one page or a range into independent files.", icon: Scissors, category: "organize", available: false },
-  { slug: "rotate-pdf", name: "Rotate PDF", description: "Rotate your PDFs the way you need them.", icon: RotateCw, category: "organize", available: false },
-  { slug: "organize-pdf", name: "Organize PDF", description: "Sort, add and delete PDF pages.", icon: ListOrdered, category: "organize", available: false },
+  { slug: "split-pdf", name: "Split PDF", description: "Separate one page or a range into independent files.", icon: Scissors, category: "organize", available: true },
+  { slug: "rotate-pdf", name: "Rotate PDF", description: "Rotate your PDFs the way you need them.", icon: RotateCw, category: "organize", available: true },
+  { slug: "organize-pdf", name: "Organize PDF", description: "Sort, add and delete PDF pages.", icon: ListOrdered, category: "organize", available: true },
 
   // Optimize
-  { slug: "compress-pdf", name: "Compress PDF", description: "Reduce file size while keeping quality.", icon: Minimize2, category: "optimize", available: false },
-  { slug: "repair-pdf", name: "Repair PDF", description: "Recover damaged PDF files.", icon: FileSearch, category: "optimize", available: false },
+  { slug: "compress-pdf", name: "Compress PDF", description: "Reduce file size while keeping quality.", icon: Minimize2, category: "optimize", available: true },
+  { slug: "repair-pdf", name: "Repair PDF", description: "Recover damaged PDF files.", icon: FileSearch, category: "optimize", available: true },
 
   // Convert TO PDF
   { slug: "jpg-to-pdf", name: "JPG to PDF", description: "Convert JPG images to PDF in seconds.", icon: ImageIcon, category: "convert-to", available: true },
-  { slug: "word-to-pdf", name: "Word to PDF", description: "Make DOC and DOCX files easy to read.", icon: FileText, category: "convert-to", available: false },
-  { slug: "powerpoint-to-pdf", name: "PowerPoint to PDF", description: "Convert PPT and PPTX into PDF.", icon: Presentation, category: "convert-to", available: false },
-  { slug: "excel-to-pdf", name: "Excel to PDF", description: "Convert XLS and XLSX into PDF.", icon: FileSpreadsheet, category: "convert-to", available: false },
+  { slug: "word-to-pdf", name: "Word to PDF", description: "Make DOCX files easy to read.", icon: FileText, category: "convert-to", available: true },
+  { slug: "powerpoint-to-pdf", name: "PowerPoint to PDF", description: "Convert PPTX into PDF.", icon: Presentation, category: "convert-to", available: true },
+  { slug: "excel-to-pdf", name: "Excel to PDF", description: "Convert XLSX/CSV into PDF.", icon: FileSpreadsheet, category: "convert-to", available: true },
 
   // Convert FROM PDF
   { slug: "pdf-to-jpg", name: "PDF to JPG", description: "Extract pages as JPG images.", icon: FileImage, category: "convert-from", available: true },
-  { slug: "pdf-to-word", name: "PDF to Word", description: "Convert PDFs to editable DOCX.", icon: FileDown, category: "convert-from", available: false },
-  { slug: "pdf-to-powerpoint", name: "PDF to PowerPoint", description: "Convert PDFs to editable PPTX.", icon: FileUp, category: "convert-from", available: false },
-  { slug: "pdf-to-excel", name: "PDF to Excel", description: "Pull data straight from PDFs into Excel.", icon: FileSpreadsheet, category: "convert-from", available: false },
+  { slug: "pdf-to-word", name: "PDF to Word", description: "Convert PDFs to editable DOCX.", icon: FileDown, category: "convert-from", available: true },
+  { slug: "pdf-to-powerpoint", name: "PDF to PowerPoint", description: "Convert PDFs to PPTX slides.", icon: FileUp, category: "convert-from", available: true },
+  { slug: "pdf-to-excel", name: "PDF to Excel", description: "Pull data straight from PDFs into Excel.", icon: FileSpreadsheet, category: "convert-from", available: true },
 
   // Edit
-  { slug: "edit-pdf", name: "Edit PDF", description: "Add text, shapes and images to your PDF.", icon: PenLine, category: "edit", available: false },
-  { slug: "watermark-pdf", name: "Watermark", description: "Stamp an image or text over your PDF.", icon: Stamp, category: "edit", available: false },
+  { slug: "edit-pdf", name: "Edit PDF", description: "Add text and annotations to your PDF.", icon: PenLine, category: "edit", available: true },
+  { slug: "watermark-pdf", name: "Watermark", description: "Stamp text over every page of your PDF.", icon: Stamp, category: "edit", available: true },
 
   // Security
-  { slug: "protect-pdf", name: "Protect PDF", description: "Encrypt PDFs with a password.", icon: Lock, category: "security", available: false },
-  { slug: "unlock-pdf", name: "Unlock PDF", description: "Remove PDF password security.", icon: Unlock, category: "security", available: false },
+  { slug: "protect-pdf", name: "Protect PDF", description: "Encrypt PDFs with a password (AES-256).", icon: Lock, category: "security", available: true },
+  { slug: "unlock-pdf", name: "Unlock PDF", description: "Decrypt protected PDFs with the password.", icon: Unlock, category: "security", available: true },
 ];
 
 export const categoryColor: Record<ToolCategory, string> = {
