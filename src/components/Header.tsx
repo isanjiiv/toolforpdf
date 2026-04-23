@@ -18,11 +18,15 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight">
+        <Link to="/" className="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight md:text-xl">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
           <FileText className="h-5 w-5" />
           </span>
-          doc<span className="text-primary-deep">pdf</span>
+          <span className="flex items-baseline gap-1">
+            <span className="text-foreground">TOOL</span>
+            <span className="text-sm font-semibold text-muted-foreground md:text-base">FOR</span>
+            <span className="text-primary-deep">PDF</span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
