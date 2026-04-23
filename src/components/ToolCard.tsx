@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
-import { Tool, toolIconStyles } from "@/lib/tools";
-import ToolIcon from "@/components/ToolIcon";
+import { Tool, categoryColor } from "@/lib/tools";
 import { cn } from "@/lib/utils";
 
 const ToolCard = ({ tool }: { tool: Tool }) => {
-  const style = toolIconStyles[tool.slug] ?? { palette: "yellow" as const };
+  const Icon = tool.icon;
   return (
     <Link
       to={`/tools/${tool.slug}`}
       className={cn(
-        "group relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-card transition-bounce",
+        "group relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-card transition-bounce",
         "hover:-translate-y-1 hover:border-primary/40 hover:shadow-card-hover"
       )}
     >
@@ -18,16 +17,16 @@ const ToolCard = ({ tool }: { tool: Tool }) => {
           Soon
         </span>
       )}
-      <div className="mb-5 transition-bounce group-hover:scale-110 group-hover:-rotate-3">
-        <ToolIcon
-          palette={style.palette}
-          letter={style.letter}
-          arrow={style.arrow}
-          single={style.single}
-        />
+      <div
+        className={cn(
+          "mb-4 grid h-12 w-12 place-items-center rounded-xl transition-smooth group-hover:scale-110",
+          categoryColor[tool.category]
+        )}
+      >
+        <Icon className="h-6 w-6" strokeWidth={2} />
       </div>
-      <h3 className="font-display text-lg font-bold text-foreground">{tool.name}</h3>
-      <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{tool.description}</p>
+      <h3 className="font-display text-base font-bold text-foreground">{tool.name}</h3>
+      <p className="mt-1 text-sm leading-snug text-muted-foreground">{tool.description}</p>
     </Link>
   );
 };
