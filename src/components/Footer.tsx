@@ -1,4 +1,4 @@
-import { FileText } from "lucide-react";
+import { FileText, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { tools, categoryLabel, ToolCategory } from "@/lib/tools";
 
@@ -47,7 +47,9 @@ const Footer = () => {
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} TOOL FOR PDF. All rights reserved.</p>
           <p>
-            Made by{" "}
+            Made with{" "}
+            <Heart className="inline h-4 w-4 text-destructive" fill="currentColor" />{" "}
+            by{" "}
             <a
               href="https://isanjiiv.github.io/"
               target="_blank"
