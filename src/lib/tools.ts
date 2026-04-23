@@ -25,6 +25,36 @@ export const categoryLabel: Record<ToolCategory, string> = {
   security: "PDF Security",
 };
 
+import type { Palette, ArrowDir } from "@/components/ToolIcon";
+
+export interface ToolIconStyle {
+  palette: Palette;
+  letter?: string;
+  arrow?: ArrowDir;
+  single?: boolean;
+}
+
+export const toolIconStyles: Record<string, ToolIconStyle> = {
+  "merge-pdf":         { palette: "red",    arrow: "up-left" },
+  "split-pdf":         { palette: "red",    arrow: "up-left" },
+  "rotate-pdf":        { palette: "indigo", arrow: "up-right" },
+  "organize-pdf":      { palette: "indigo", arrow: "down-right" },
+  "compress-pdf":      { palette: "green",  arrow: "down-right" },
+  "repair-pdf":        { palette: "teal",   arrow: "up-right" },
+  "jpg-to-pdf":        { palette: "yellow", arrow: "down-right" },
+  "word-to-pdf":       { palette: "blue",   letter: "W", arrow: "down-right" },
+  "powerpoint-to-pdf": { palette: "orange", letter: "P", arrow: "down-right" },
+  "excel-to-pdf":      { palette: "green",  letter: "X", arrow: "down-right" },
+  "pdf-to-jpg":        { palette: "yellow", arrow: "down-right" },
+  "pdf-to-word":       { palette: "blue",   letter: "W", arrow: "down-right" },
+  "pdf-to-powerpoint": { palette: "orange", letter: "P", arrow: "down-right" },
+  "pdf-to-excel":      { palette: "green",  letter: "X", arrow: "down-right" },
+  "edit-pdf":          { palette: "purple", single: true },
+  "watermark-pdf":     { palette: "pink",   arrow: "down-right" },
+  "protect-pdf":       { palette: "teal",   arrow: "down-right" },
+  "unlock-pdf":        { palette: "teal",   arrow: "up-right" },
+};
+
 export const tools: Tool[] = [
   // Organize
   { slug: "merge-pdf", name: "Merge PDF", description: "Combine PDFs in the order you want.", icon: Combine, category: "organize", available: true },
