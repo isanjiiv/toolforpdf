@@ -46,7 +46,17 @@ const Footer = () => {
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} TOOL FOR PDF. All rights reserved.</p>
-          <p>Made with care · Files never leave your device.</p>
+          <p>
+            Made by{" "}
+            <a
+              href="https://isanjiiv.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-foreground transition-smooth hover:text-primary-deep"
+            >
+              Sanjeev Kumar
+            </a>
+          </p>
         </div>
       </div>
     </footer>
