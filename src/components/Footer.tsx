@@ -12,9 +12,9 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 font-display text-xl font-extrabold">
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">
-                <FileText className="h-5 w-5" />
+              <FileText className="h-5 w-5" />
               </span>
-              PDF<span className="text-primary-deep">ly</span>
+              doc<span className="text-primary-deep">pdf</span>
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
               Free, private, in-browser PDF tools. No uploads to a server.
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} PDFly. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} docpdf. All rights reserved.</p>
           <p>Made with care · Files never leave your device.</p>
         </div>
       </div>
