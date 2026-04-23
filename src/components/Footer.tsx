@@ -47,7 +47,9 @@ const Footer = () => {
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} TOOL FOR PDF. All rights reserved.</p>
           <p>
-            Made by{" "}
+            Made with{" "}
+            <Heart className="inline h-4 w-4 text-red-500" fill="currentColor" />{" "}
+            by{" "}
             <a
               href="https://isanjiiv.github.io/"
               target="_blank"
