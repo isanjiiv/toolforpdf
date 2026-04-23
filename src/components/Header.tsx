@@ -20,9 +20,9 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
-            <FileText className="h-5 w-5" />
+          <FileText className="h-5 w-5" />
           </span>
-          PDF<span className="text-primary-deep">ly</span>
+          doc<span className="text-primary-deep">pdf</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
