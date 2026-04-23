@@ -1,8 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { FileText, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import appIcon from "@/assets/app-icon.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -19,9 +20,8 @@ const Header = () => {
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight md:text-xl">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
-          <FileText className="h-5 w-5" />
-          </span>
+          <img src={appIcon} alt="TOOL FOR PDF logo" className="h-9 w-9 object-contain" />
+
           <span className="flex items-baseline gap-1">
             <span className="text-foreground">TOOL</span>
             <span className="text-sm font-semibold text-muted-foreground md:text-base">FOR</span>
