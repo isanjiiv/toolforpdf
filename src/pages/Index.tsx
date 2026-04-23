@@ -21,8 +21,7 @@ const Index = () => {
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-hero">
-        <div className="absolute inset-0 bg-gradient-radial opacity-70" />
+      <section className="relative overflow-hidden bg-background">
         <div className="container relative py-20 md:py-28">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-deep backdrop-blur">
