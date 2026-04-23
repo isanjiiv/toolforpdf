@@ -1,6 +1,7 @@
-import { FileText, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { tools, categoryLabel, ToolCategory } from "@/lib/tools";
+import appIcon from "@/assets/app-icon.png";
 
 const Footer = () => {
   const cats: ToolCategory[] = ["organize", "optimize", "convert-to", "convert-from"];
@@ -11,9 +12,8 @@ const Footer = () => {
         <div className="grid gap-10 md:grid-cols-5">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 font-display text-lg font-extrabold md:text-xl">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">
-              <FileText className="h-5 w-5" />
-              </span>
+              <img src={appIcon} alt="TOOL FOR PDF logo" className="h-9 w-9 object-contain" />
+
               <span className="flex items-baseline gap-1">
                 <span className="text-foreground">TOOL</span>
                 <span className="text-sm font-semibold text-muted-foreground md:text-base">FOR</span>
