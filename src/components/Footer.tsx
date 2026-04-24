@@ -1,4 +1,4 @@
-import { Heart, Github, Twitter, Linkedin, Globe } from "lucide-react";
+import { Heart, Instagram, Linkedin, Youtube, Mail, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { tools, categoryLabel, ToolCategory } from "@/lib/tools";
 import appIcon from "@/assets/app-icon.png";
