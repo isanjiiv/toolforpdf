@@ -86,7 +86,7 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-mesh" />
         <div className="absolute inset-0 bg-gradient-radial opacity-80" />
-        <div className="container relative py-20 md:py-28 lg:py-32">
+        <div className="container relative pt-20 pb-10 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-deep shadow-sm backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
@@ -136,7 +136,7 @@ const Index = () => {
       </section>
 
       {/* All tools */}
-      <section id="all-tools" className="container py-20 md:py-24">
+      <section id="all-tools" className="container pt-6 pb-20 md:pt-8 md:pb-24">
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-primary-deep">
             All Tools
