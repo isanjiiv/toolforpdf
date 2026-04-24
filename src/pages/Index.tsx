@@ -99,7 +99,7 @@ const Index = () => {
               </span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
-              Merge, split, convert, compress, edit and sign PDFs with ease — 100% free,
+              Merge, split, convert, compress, edit and sign PDFs with ease 100% free,
               private, and beautifully simple.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
@@ -145,7 +145,7 @@ const Index = () => {
             Everything you'll ever need
           </h2>
           <p className="mt-4 text-muted-foreground">
-            18 powerful PDF tools — most run instantly in your browser, no upload required.
+            18 powerful PDF tools most run instantly in your browser, no upload required.
           </p>
         </div>
 
@@ -226,7 +226,7 @@ const Index = () => {
               Ready to work smarter with PDFs?
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Pick any tool and start in seconds — no signup, no uploads, no limits.
+              Pick any tool and start in seconds no signup, no uploads, no limits.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild variant="hero" size="lg">
