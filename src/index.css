@@ -93,12 +93,12 @@
     --muted: 222 20% 16%;
     --muted-foreground: 220 10% 65%;
     --accent: 222 20% 16%;
-    --accent-foreground: 45 100% 55%;
+    --accent-foreground: 4 90% 65%;
     --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 98%;
     --border: 222 20% 18%;
     --input: 222 20% 18%;
-    --ring: 45 100% 55%;
+    --ring: 4 90% 60%;
   }
 }
 
