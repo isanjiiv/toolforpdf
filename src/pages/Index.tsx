@@ -94,7 +94,7 @@ const Index = () => {
             </span>
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]">
               Every tool you need to work with{" "}
-              <span className="bg-gradient-to-r from-primary-deep via-primary to-primary-glow bg-clip-text text-transparent">
+              <span className="text-primary">
                 PDFs in one place
               </span>
             </h1>
