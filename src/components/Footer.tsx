@@ -28,9 +28,11 @@ const Footer = () => {
             <div className="mt-5 flex items-center gap-2">
               {[
                 { Icon: Globe, href: "https://isanjiiv.github.io/", label: "Website" },
-                { Icon: Github, href: "https://github.com/", label: "GitHub" },
-                { Icon: Twitter, href: "https://twitter.com/", label: "Twitter" },
-                { Icon: Linkedin, href: "https://linkedin.com/", label: "LinkedIn" },
+                { Icon: Instagram, href: "https://www.instagram.com/isanjiiv", label: "Instagram" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/isanjiiv", label: "LinkedIn" },
+                { Icon: Youtube, href: "https://m.youtube.com/@isanjiiv", label: "YouTube" },
+                { Icon: XIcon, href: "https://x.com/isanjiiv", label: "X" },
+                { Icon: Mail, href: "mailto:sanjeev753304@gmail.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
