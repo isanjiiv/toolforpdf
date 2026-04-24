@@ -136,7 +136,7 @@ const Index = () => {
       </section>
 
       {/* All tools */}
-      <section id="all-tools" className="container py-20 md:py-24">
+      <section id="all-tools" className="container pt-6 pb-20 md:pt-8 md:pb-24">
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-primary-deep">
             All Tools
