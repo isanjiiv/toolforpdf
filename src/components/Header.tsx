@@ -17,15 +17,19 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
-      <div className="container flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight md:text-xl">
+    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/75 backdrop-blur-xl">
+      <div className="container flex h-16 items-center justify-between gap-4 md:h-18">
+        <Link
+          to="/"
+          className="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight md:text-xl"
+        >
           <img src={appIcon} alt="TOOL FOR PDF logo" className="h-9 w-9 object-contain" />
-
           <span className="flex items-baseline gap-1">
             <span className="text-foreground">TOOL</span>
             <span className="text-sm font-semibold text-muted-foreground md:text-base">FOR</span>
-            <span className="text-primary-deep">PDF</span>
+            <span className="bg-gradient-to-r from-primary-deep to-primary bg-clip-text text-transparent">
+              PDF
+            </span>
           </span>
         </Link>
 
@@ -37,7 +41,7 @@ const Header = () => {
               end={n.to === "/"}
               className={({ isActive }) =>
                 cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-smooth hover:bg-secondary hover:text-foreground",
+                  "rounded-lg px-3.5 py-2 text-sm font-medium text-muted-foreground transition-smooth hover:bg-secondary hover:text-foreground",
                   isActive && "bg-secondary text-foreground"
                 )
               }
@@ -47,7 +51,10 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2 md:flex">
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/#all-tools">Pricing</Link>
+          </Button>
           <Button asChild variant="hero" size="sm">
             <Link to="/#all-tools">Get started</Link>
           </Button>
@@ -75,6 +82,11 @@ const Header = () => {
                 {n.label}
               </Link>
             ))}
+            <Button asChild variant="hero" size="sm" className="mt-2">
+              <Link to="/#all-tools" onClick={() => setOpen(false)}>
+                Get started
+              </Link>
+            </Button>
           </nav>
         </div>
       )}
