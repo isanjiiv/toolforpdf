@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -15,6 +16,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ToolCard from "@/components/ToolCard";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { tools, categoryLabel, ToolCategory } from "@/lib/tools";
 
 const orderedCategories: ToolCategory[] = [
@@ -24,6 +26,18 @@ const orderedCategories: ToolCategory[] = [
   "convert-from",
   "edit",
   "security",
+];
+
+type FilterValue = "all" | ToolCategory;
+
+const filters: { value: FilterValue; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "organize", label: "Organize PDF" },
+  { value: "optimize", label: "Optimize PDF" },
+  { value: "convert-to", label: "Convert to PDF" },
+  { value: "convert-from", label: "Convert from PDF" },
+  { value: "edit", label: "Edit PDF" },
+  { value: "security", label: "PDF Security" },
 ];
 
 const features = [
