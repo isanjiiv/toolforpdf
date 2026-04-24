@@ -49,7 +49,7 @@ const features = [
   {
     icon: Zap,
     title: "Lightning Fast",
-    desc: "Instant results powered by modern WebAssembly no waiting in queues.",
+    desc: "Instant results powered by modern WebAssembly — no waiting in queues.",
   },
   {
     icon: Cpu,
@@ -88,7 +88,10 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-radial opacity-80" />
         <div className="container relative pt-20 pb-10 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
-            
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-deep shadow-sm backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5" />
+              Free · Private · No signup
+            </span>
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]">
               Every tool you need to work with{" "}
               <span className="text-primary">
