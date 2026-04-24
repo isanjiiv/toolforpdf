@@ -1,5 +1,16 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Zap, Lock, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Zap,
+  Lock,
+  Sparkles,
+  FileUp,
+  Globe,
+  Cpu,
+  Heart,
+  Star,
+} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ToolCard from "@/components/ToolCard";
@@ -15,76 +26,126 @@ const orderedCategories: ToolCategory[] = [
   "security",
 ];
 
+const features = [
+  {
+    icon: ShieldCheck,
+    title: "Privacy First",
+    desc: "Your files are processed in your browser. Nothing is uploaded to a server.",
+  },
+  {
+    icon: Zap,
+    title: "Lightning Fast",
+    desc: "Instant results powered by modern WebAssembly — no waiting in queues.",
+  },
+  {
+    icon: Cpu,
+    title: "No Installation",
+    desc: "Works directly in the browser. No software, no plugins, no accounts.",
+  },
+  {
+    icon: Globe,
+    title: "Works Everywhere",
+    desc: "Beautiful experience on desktop, tablet, and mobile devices.",
+  },
+  {
+    icon: Lock,
+    title: "Secure by Design",
+    desc: "AES-256 encryption available for password-protecting your PDFs.",
+  },
+  {
+    icon: Heart,
+    title: "Free Forever",
+    desc: "All tools are free to use, with no hidden fees or watermarks.",
+  },
+];
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-hero">
-        <div className="absolute inset-0 bg-gradient-radial opacity-70" />
-        <div className="container relative py-20 md:py-28">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-mesh" />
+        <div className="absolute inset-0 bg-gradient-radial opacity-80" />
+        <div className="container relative py-20 md:py-28 lg:py-32">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-deep backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-deep shadow-sm backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
               Free · Private · No signup
             </span>
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-              Every PDF tool you need,{" "}
+            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]">
+              Every tool you need to work with{" "}
               <span className="bg-gradient-to-r from-primary-deep via-primary to-primary-glow bg-clip-text text-transparent">
-                in one place
+                PDFs in one place
               </span>
             </h1>
-            <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
-              Merge, split, convert, compress and edit PDFs straight in your browser.
-              Files never leave your device.
+            <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
+              Merge, split, convert, compress, edit and sign PDFs with ease — 100% free,
+              private, and beautifully simple.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Button asChild variant="hero" size="lg">
-                <a href="#all-tools">
-                  Explore tools <ArrowRight className="h-4 w-4" />
-                </a>
+                <Link to="/tools/merge-pdf">
+                  <FileUp className="h-4 w-4" />
+                  Select PDF File
+                </Link>
               </Button>
               <Button asChild variant="soft" size="lg">
-                <Link to="/tools/merge-pdf">Try Merge PDF</Link>
+                <a href="#all-tools">
+                  Explore All Tools <ArrowRight className="h-4 w-4" />
+                </a>
               </Button>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-success" /> 100% private</span>
-              <span className="inline-flex items-center gap-1.5"><Zap className="h-4 w-4 text-primary-deep" /> Lightning fast</span>
-              <span className="inline-flex items-center gap-1.5"><Lock className="h-4 w-4 text-tool-security" /> No uploads</span>
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5">
+                <ShieldCheck className="h-4 w-4 text-success" /> 100% private
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Zap className="h-4 w-4 text-primary-deep" /> Lightning fast
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Lock className="h-4 w-4 text-tool-security" /> No uploads
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Star className="h-4 w-4 text-tool-convert-to" fill="currentColor" /> Loved by
+                thousands
+              </span>
             </div>
           </div>
         </div>
       </section>
 
       {/* All tools */}
-      <section id="all-tools" className="container py-16 md:py-24">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            All the tools you'll ever need
+      <section id="all-tools" className="container py-20 md:py-24">
+        <div className="mx-auto mb-14 max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-wider text-primary-deep">
+            All Tools
+          </span>
+          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+            Everything you'll ever need
           </h2>
-          <p className="mt-3 text-muted-foreground">
-            Pick a tool below to get started — most run instantly in your browser.
+          <p className="mt-4 text-muted-foreground">
+            18 powerful PDF tools — most run instantly in your browser, no upload required.
           </p>
         </div>
 
-        <div className="space-y-14">
+        <div className="space-y-16">
           {orderedCategories.map((cat) => {
             const list = tools.filter((t) => t.category === cat);
             if (!list.length) return null;
             return (
               <div key={cat}>
-                <div className="mb-5 flex items-end justify-between">
+                <div className="mb-6 flex items-end justify-between border-b border-border/60 pb-3">
                   <h3 className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
                     {categoryLabel[cat]}
                   </h3>
-                  <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     {list.length} tools
                   </span>
                 </div>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {list.map((t) => (
                     <ToolCard key={t.slug} tool={t} />
                   ))}
@@ -92,6 +153,85 @@ const Index = () => {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="border-y border-border/60 bg-secondary/40">
+        <div className="container py-20 md:py-24">
+          <div className="mx-auto mb-14 max-w-2xl text-center">
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary-deep">
+              Why choose us
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+              Trusted by thousands worldwide
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Built with the highest standards of speed, privacy, and design.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((f) => {
+              const Icon = f.icon;
+              return (
+                <div
+                  key={f.title}
+                  className="group rounded-2xl border border-border/60 bg-card p-6 shadow-card transition-bounce hover:-translate-y-1 hover:shadow-card-hover"
+                >
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary-deep transition-bounce group-hover:scale-110">
+                    <Icon className="h-5 w-5" strokeWidth={2.25} />
+                  </div>
+                  <h3 className="font-display text-base font-bold text-foreground">{f.title}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{f.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* trust stats */}
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-6 rounded-2xl border border-border/60 bg-card p-8 shadow-elegant md:grid-cols-4">
+            {[
+              { v: "10M+", l: "Files processed" },
+              { v: "180+", l: "Countries" },
+              { v: "18", l: "PDF tools" },
+              { v: "4.9★", l: "User rating" },
+            ].map((s) => (
+              <div key={s.l} className="text-center">
+                <div className="font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+                  {s.v}
+                </div>
+                <div className="mt-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                  {s.l}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container py-20 md:py-24">
+        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/5 via-background to-primary/10 px-8 py-14 text-center shadow-elegant md:px-16 md:py-20">
+          <div className="absolute inset-0 bg-gradient-radial opacity-60" />
+          <div className="relative mx-auto max-w-2xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+              Ready to work smarter with PDFs?
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Pick any tool and start in seconds — no signup, no uploads, no limits.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <Button asChild variant="hero" size="lg">
+                <Link to="/tools/merge-pdf">
+                  <FileUp className="h-4 w-4" /> Select PDF File
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="#all-tools">Browse all tools</a>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
