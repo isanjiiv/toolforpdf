@@ -149,29 +149,37 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="space-y-16">
-          {orderedCategories.map((cat) => {
-            const list = tools.filter((t) => t.category === cat);
-            if (!list.length) return null;
+        {/* Filter pills */}
+        <div className="mb-10 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          {filters.map((f) => {
+            const isActive = activeFilter === f.value;
             return (
-              <div key={cat}>
-                <div className="mb-6 flex items-end justify-between border-b border-border/60 pb-3">
-                  <h3 className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-                    {categoryLabel[cat]}
-                  </h3>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    {list.length} tools
-                  </span>
-                </div>
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {list.map((t) => (
-                    <ToolCard key={t.slug} tool={t} />
-                  ))}
-                </div>
-              </div>
+              <button
+                key={f.value}
+                onClick={() => setActiveFilter(f.value)}
+                className={cn(
+                  "rounded-full border px-5 py-2 text-sm font-semibold transition-bounce",
+                  isActive
+                    ? "border-foreground bg-foreground text-background shadow-card"
+                    : "border-border bg-card text-foreground hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary-deep hover:shadow-card",
+                )}
+              >
+                {f.label}
+              </button>
             );
           })}
         </div>
+
+        {/* Unified grid */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          {visibleTools.map((t) => (
+            <ToolCard key={t.slug} tool={t} />
+          ))}
+        </div>
+
+        {visibleTools.length === 0 && (
+          <p className="mt-10 text-center text-muted-foreground">No tools in this category yet.</p>
+        )}
       </section>
 
       {/* Why choose us */}
