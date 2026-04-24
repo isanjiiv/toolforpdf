@@ -73,18 +73,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* secondary links */}
-        <div className="mt-12 grid gap-3 border-t border-border pt-8 sm:grid-cols-2 md:grid-cols-5">
-          {["About", "Privacy Policy", "Terms", "Contact", "Blog"].map((l) => (
-            <Link
-              key={l}
-              to="/"
-              className="text-sm font-medium text-muted-foreground transition-smooth hover:text-primary-deep"
-            >
-              {l}
-            </Link>
-          ))}
-        </div>
 
         <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} TOOL FOR PDF. All rights reserved.</p>
