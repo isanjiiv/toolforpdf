@@ -74,6 +74,10 @@ const features = [
 ];
 
 const Index = () => {
+  const [activeFilter, setActiveFilter] = useState<FilterValue>("all");
+  const visibleTools =
+    activeFilter === "all" ? tools : tools.filter((t) => t.category === activeFilter);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
