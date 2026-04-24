@@ -214,25 +214,6 @@ const Index = () => {
               );
             })}
           </div>
-
-          {/* trust stats */}
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-6 rounded-2xl border border-border/60 bg-card p-8 shadow-elegant md:grid-cols-4">
-            {[
-              { v: "10M+", l: "Files processed" },
-              { v: "180+", l: "Countries" },
-              { v: "18", l: "PDF tools" },
-              { v: "4.9★", l: "User rating" },
-            ].map((s) => (
-              <div key={s.l} className="text-center">
-                <div className="font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-                  {s.v}
-                </div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                  {s.l}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
