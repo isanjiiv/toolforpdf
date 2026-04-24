@@ -1,20 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import { useState } from "react";
 import { Tool, categoryColor } from "@/lib/tools";
 import { cn } from "@/lib/utils";
-import LottieToolIcon from "./LottieToolIcon";
 
 const ToolCard = ({ tool }: { tool: Tool }) => {
   const Icon = tool.icon;
-  const [hovered, setHovered] = useState(false);
   return (
     <Link
       to={`/tools/${tool.slug}`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onFocus={() => setHovered(true)}
-      onBlur={() => setHovered(false)}
       className={cn(
         "group relative flex flex-col rounded-2xl border border-border/70 bg-card p-6 shadow-card transition-bounce overflow-hidden",
         "hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-card-hover"
@@ -31,33 +24,11 @@ const ToolCard = ({ tool }: { tool: Tool }) => {
 
       <div
         className={cn(
-          "relative mb-5 grid h-14 w-14 place-items-center rounded-2xl ring-1 ring-inset ring-border/60 transition-bounce group-hover:scale-110 group-hover:ring-transparent",
+          "relative mb-5 grid h-12 w-12 place-items-center rounded-xl ring-1 ring-inset ring-border/60 transition-bounce group-hover:scale-110 group-hover:ring-transparent",
           categoryColor[tool.category]
         )}
       >
-        <div className="relative h-9 w-9">
-          {/* Lucide icon shown when Lottie hasn't loaded / as crisp base */}
-          <Icon
-            className={cn(
-              "absolute inset-0 m-auto h-7 w-7 transition-opacity duration-200",
-              hovered ? "opacity-0" : "opacity-100"
-            )}
-            strokeWidth={2}
-          />
-          <div
-            className={cn(
-              "absolute inset-0 transition-opacity duration-200",
-              hovered ? "opacity-100" : "opacity-0"
-            )}
-          >
-            <LottieToolIcon
-              slug={tool.slug}
-              category={tool.category}
-              hovered={hovered}
-              className="h-full w-full"
-            />
-          </div>
-        </div>
+        <Icon className="h-6 w-6" strokeWidth={2} />
       </div>
 
       <h3 className="relative font-display text-base font-bold tracking-tight text-foreground">
