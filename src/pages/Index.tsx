@@ -88,7 +88,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-radial opacity-80" />
         <div className="container relative pt-20 pb-10 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
-          
+            
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]">
               Every tool you need to work with{" "}
               <span className="text-primary">
@@ -131,6 +131,21 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* All tools */}
+      <section id="all-tools" className="container pt-6 pb-20 md:pt-8 md:pb-24">
+        <div className="mx-auto mb-14 max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-wider text-primary-deep">
+            All Tools
+          </span>
+          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+            Everything you'll ever need
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            18 powerful PDF tools most run instantly in your browser, no upload required.
+          </p>
+        </div>
+
         {/* Filter pills */}
         <div className="mb-10 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           {filters.map((f) => {
