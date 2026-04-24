@@ -1,7 +1,13 @@
-import { Heart, Github, Twitter, Linkedin, Globe } from "lucide-react";
+import { Heart, Instagram, Linkedin, Youtube, Mail, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { tools, categoryLabel, ToolCategory } from "@/lib/tools";
 import appIcon from "@/assets/app-icon.png";
+
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 const Footer = () => {
   const cats: ToolCategory[] = ["organize", "optimize", "convert-to", "convert-from"];
@@ -28,9 +34,11 @@ const Footer = () => {
             <div className="mt-5 flex items-center gap-2">
               {[
                 { Icon: Globe, href: "https://isanjiiv.github.io/", label: "Website" },
-                { Icon: Github, href: "https://github.com/", label: "GitHub" },
-                { Icon: Twitter, href: "https://twitter.com/", label: "Twitter" },
-                { Icon: Linkedin, href: "https://linkedin.com/", label: "LinkedIn" },
+                { Icon: Instagram, href: "https://www.instagram.com/isanjiiv", label: "Instagram" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/isanjiiv", label: "LinkedIn" },
+                { Icon: Youtube, href: "https://m.youtube.com/@isanjiiv", label: "YouTube" },
+                { Icon: XIcon, href: "https://x.com/isanjiiv", label: "X" },
+                { Icon: Mail, href: "mailto:sanjeev753304@gmail.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
