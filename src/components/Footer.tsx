@@ -28,7 +28,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Free, private, in-browser PDF tools. Beautifully designed for everyone — no
+              Free, private, in-browser PDF tools. Beautifully designed for everyone no
               uploads, no signup, no limits.
             </p>
             <div className="mt-5 flex items-center gap-2">

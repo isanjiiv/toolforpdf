@@ -49,7 +49,7 @@ const features = [
   {
     icon: Zap,
     title: "Lightning Fast",
-    desc: "Instant results powered by modern WebAssembly — no waiting in queues.",
+    desc: "Instant results powered by modern WebAssembly no waiting in queues.",
   },
   {
     icon: Cpu,
