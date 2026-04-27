@@ -164,7 +164,7 @@ const Index = () => {
                   key={f.title}
                   className="group rounded-2xl border border-border/60 bg-card p-6 shadow-card transition-bounce hover:-translate-y-1 hover:shadow-card-hover"
                 >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary-deep transition-bounce group-hover:scale-110">
+                  <div className={cn("mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl transition-bounce group-hover:scale-110", f.iconBg, f.iconColor)}>
                     <Icon className="h-5 w-5" strokeWidth={2.25} />
                   </div>
                   <h3 className="font-display text-base font-bold text-foreground">{f.title}</h3>
