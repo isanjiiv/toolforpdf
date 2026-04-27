@@ -57,13 +57,43 @@ export const tools: Tool[] = [
   { slug: "unlock-pdf", name: "Unlock PDF", description: "Decrypt protected PDFs with the password.", icon: Unlock, category: "security", available: true },
 ];
 
+// A varied palette so icons never stay fixed to a single (yellow) hue.
+// Each entry pairs a soft tinted background with a vivid foreground.
+const iconPalette: string[] = [
+  "bg-blue-100 text-blue-600",
+  "bg-emerald-100 text-emerald-600",
+  "bg-orange-100 text-orange-600",
+  "bg-purple-100 text-purple-600",
+  "bg-rose-100 text-rose-600",
+  "bg-sky-100 text-sky-600",
+  "bg-amber-100 text-amber-600",
+  "bg-teal-100 text-teal-600",
+  "bg-pink-100 text-pink-600",
+  "bg-indigo-100 text-indigo-600",
+  "bg-lime-100 text-lime-600",
+  "bg-fuchsia-100 text-fuchsia-600",
+  "bg-cyan-100 text-cyan-600",
+  "bg-red-100 text-red-600",
+  "bg-violet-100 text-violet-600",
+  "bg-green-100 text-green-600",
+];
+
+const pickRandom = () => iconPalette[Math.floor(Math.random() * iconPalette.length)];
+
+// Per-tool randomized colors (stable for the lifetime of the module load).
+export const toolColor: Record<string, string> = tools.reduce((acc, t) => {
+  acc[t.slug] = pickRandom();
+  return acc;
+}, {} as Record<string, string>);
+
+// Category fallback colors — also randomized, kept for ToolLayout header.
 export const categoryColor: Record<ToolCategory, string> = {
-  organize: "bg-tool-organize/10 text-tool-organize",
-  optimize: "bg-tool-optimize/10 text-tool-optimize",
-  "convert-to": "bg-tool-convert-to/10 text-tool-convert-to",
-  "convert-from": "bg-tool-convert-from/10 text-tool-convert-from",
-  edit: "bg-tool-edit/10 text-tool-edit",
-  security: "bg-tool-security/10 text-tool-security",
+  organize: pickRandom(),
+  optimize: pickRandom(),
+  "convert-to": pickRandom(),
+  "convert-from": pickRandom(),
+  edit: pickRandom(),
+  security: pickRandom(),
 };
 
 export const getTool = (slug: string) => tools.find((t) => t.slug === slug);
