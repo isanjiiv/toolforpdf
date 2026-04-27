@@ -51,15 +51,6 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
-          <Button asChild variant="ghost" size="sm">
-            <Link to="/#all-tools">Pricing</Link>
-          </Button>
-          <Button asChild variant="hero" size="sm">
-            <Link to="/#all-tools">Get started</Link>
-          </Button>
-        </div>
-
         <button
           className="grid h-10 w-10 place-items-center rounded-lg border border-border md:hidden"
           onClick={() => setOpen((v) => !v)}
