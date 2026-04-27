@@ -45,31 +45,43 @@ const features = [
     icon: ShieldCheck,
     title: "Privacy First",
     desc: "Your files are processed in your browser. Nothing is uploaded to a server.",
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-600",
   },
   {
     icon: Zap,
     title: "Lightning Fast",
     desc: "Instant results powered by modern WebAssembly — no waiting in queues.",
+    iconBg: "bg-orange-100",
+    iconColor: "text-orange-600",
   },
   {
     icon: Cpu,
     title: "No Installation",
     desc: "Works directly in the browser. No software, no plugins, no accounts.",
+    iconBg: "bg-purple-100",
+    iconColor: "text-purple-600",
   },
   {
     icon: Globe,
     title: "Works Everywhere",
     desc: "Beautiful experience on desktop, tablet, and mobile devices.",
+    iconBg: "bg-emerald-100",
+    iconColor: "text-emerald-600",
   },
   {
     icon: Lock,
     title: "Secure by Design",
     desc: "AES-256 encryption available for password-protecting your PDFs.",
+    iconBg: "bg-rose-100",
+    iconColor: "text-rose-600",
   },
   {
     icon: Heart,
     title: "Free Forever",
     desc: "All tools are free to use, with no hidden fees or watermarks.",
+    iconBg: "bg-pink-100",
+    iconColor: "text-pink-600",
   },
 ];
 
@@ -152,7 +164,7 @@ const Index = () => {
                   key={f.title}
                   className="group rounded-2xl border border-border/60 bg-card p-6 shadow-card transition-bounce hover:-translate-y-1 hover:shadow-card-hover"
                 >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary-deep transition-bounce group-hover:scale-110">
+                  <div className={cn("mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl transition-bounce group-hover:scale-110", f.iconBg, f.iconColor)}>
                     <Icon className="h-5 w-5" strokeWidth={2.25} />
                   </div>
                   <h3 className="font-display text-base font-bold text-foreground">{f.title}</h3>
