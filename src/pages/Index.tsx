@@ -123,10 +123,6 @@ const Index = () => {
               <span className="inline-flex items-center gap-1.5">
                 <Lock className="h-4 w-4 text-tool-security" /> No uploads
               </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Star className="h-4 w-4 text-tool-convert-to" fill="currentColor" /> Loved by
-                thousands
-              </span>
             </div>
           </div>
         </div>
