@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import { Tool, categoryColor } from "@/lib/tools";
+import { Tool, toolColor } from "@/lib/tools";
 import { cn } from "@/lib/utils";
 
 const ToolCard = ({ tool }: { tool: Tool }) => {
@@ -25,7 +25,7 @@ const ToolCard = ({ tool }: { tool: Tool }) => {
       <div
         className={cn(
           "relative mb-5 grid h-12 w-12 place-items-center rounded-xl ring-1 ring-inset ring-border/60 transition-bounce group-hover:scale-110 group-hover:ring-transparent",
-          categoryColor[tool.category]
+          toolColor[tool.slug]
         )}
       >
         <Icon className="h-6 w-6" strokeWidth={2} />
