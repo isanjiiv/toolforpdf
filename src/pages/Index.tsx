@@ -82,52 +82,6 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-mesh" />
-        <div className="absolute inset-0 bg-gradient-radial opacity-80" />
-        <div className="container relative pt-20 pb-10 md:pt-28 md:pb-12 lg:pt-32 lg:pb-14">
-          <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
-            
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.25rem]">
-              Every tool you need to work with{" "}
-              <span className="text-primary">
-                PDFs in one place
-              </span>
-            </h1>
-            <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
-              Merge, split, convert, compress, edit and sign PDFs with ease 100% free,
-              private, and beautifully simple.
-            </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Button asChild variant="hero" size="lg">
-                <Link to="/tools/merge-pdf">
-                  <FileUp className="h-4 w-4" />
-                  Select PDF File
-                </Link>
-              </Button>
-              <Button asChild variant="soft" size="lg">
-                <a href="#all-tools">
-                  Explore All Tools <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium text-muted-foreground">
-              <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck className="h-4 w-4 text-success" /> 100% private
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Zap className="h-4 w-4 text-primary-deep" /> Lightning fast
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Lock className="h-4 w-4 text-tool-security" /> No uploads
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* All tools */}
       <section id="all-tools" className="container pt-6 pb-20 md:pt-8 md:pb-24">
         <div className="mx-auto mb-14 max-w-2xl text-center">
