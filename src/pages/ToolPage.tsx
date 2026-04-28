@@ -20,6 +20,14 @@ import EditPdf from "./tools/EditPdf";
 import WatermarkPdf from "./tools/WatermarkPdf";
 import ProtectPdf from "./tools/ProtectPdf";
 import UnlockPdf from "./tools/UnlockPdf";
+import PageNumbersPdf from "./tools/PageNumbersPdf";
+import CropPdf from "./tools/CropPdf";
+import ExtractPages from "./tools/ExtractPages";
+import RemovePages from "./tools/RemovePages";
+import PdfToPng from "./tools/PdfToPng";
+import NupPdf from "./tools/NupPdf";
+import HtmlToPdf from "./tools/HtmlToPdf";
+import SignPdf from "./tools/SignPdf";
 
 const ComingSoon = () => (
   <div className="rounded-3xl border border-dashed border-border bg-secondary/40 p-12 text-center">
@@ -50,6 +58,14 @@ const REGISTRY: Record<string, () => JSX.Element> = {
   "watermark-pdf": WatermarkPdf,
   "protect-pdf": ProtectPdf,
   "unlock-pdf": UnlockPdf,
+  "page-numbers": PageNumbersPdf,
+  "crop-pdf": CropPdf,
+  "extract-pages": ExtractPages,
+  "remove-pages": RemovePages,
+  "pdf-to-png": PdfToPng,
+  "nup-pdf": NupPdf,
+  "html-to-pdf": HtmlToPdf,
+  "sign-pdf": SignPdf,
 };
 
 const ToolPage = () => {

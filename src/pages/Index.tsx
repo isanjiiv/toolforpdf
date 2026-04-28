@@ -104,7 +104,7 @@ const Index = () => {
             Everything you'll ever need
           </h2>
           <p className="mt-4 text-muted-foreground">
-            18 powerful PDF tools most run instantly in your browser, no upload required.
+            {tools.length} powerful PDF tools — most run instantly in your browser, no upload required.
           </p>
         </div>
 
