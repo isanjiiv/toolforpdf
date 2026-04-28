@@ -2,6 +2,7 @@ import {
   Combine, Scissors, FileDown, FileUp, Image as ImageIcon, FileImage,
   FileText, Presentation, FileSpreadsheet, Minimize2, RotateCw,
   Lock, Unlock, Stamp, PenLine, FileSearch, ListOrdered,
+  Hash, Crop, FileOutput, FileMinus2, Images, LayoutGrid, Code2, Signature,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -31,6 +32,9 @@ export const tools: Tool[] = [
   { slug: "split-pdf", name: "Split PDF", description: "Separate one page or a range into independent files.", icon: Scissors, category: "organize", available: true },
   { slug: "rotate-pdf", name: "Rotate PDF", description: "Rotate your PDFs the way you need them.", icon: RotateCw, category: "organize", available: true },
   { slug: "organize-pdf", name: "Organize PDF", description: "Sort, add and delete PDF pages.", icon: ListOrdered, category: "organize", available: true },
+  { slug: "extract-pages", name: "Extract Pages", description: "Pull selected pages into a new PDF.", icon: FileOutput, category: "organize", available: true },
+  { slug: "remove-pages", name: "Remove Pages", description: "Delete the pages you don't need.", icon: FileMinus2, category: "organize", available: true },
+  { slug: "nup-pdf", name: "N-up Pages", description: "Place multiple pages on one sheet.", icon: LayoutGrid, category: "organize", available: true },
 
   // Optimize
   { slug: "compress-pdf", name: "Compress PDF", description: "Reduce file size while keeping quality.", icon: Minimize2, category: "optimize", available: true },
@@ -41,9 +45,11 @@ export const tools: Tool[] = [
   { slug: "word-to-pdf", name: "Word to PDF", description: "Make DOCX files easy to read.", icon: FileText, category: "convert-to", available: true },
   { slug: "powerpoint-to-pdf", name: "PowerPoint to PDF", description: "Convert PPTX into PDF.", icon: Presentation, category: "convert-to", available: true },
   { slug: "excel-to-pdf", name: "Excel to PDF", description: "Convert XLSX/CSV into PDF.", icon: FileSpreadsheet, category: "convert-to", available: true },
+  { slug: "html-to-pdf", name: "HTML to PDF", description: "Render HTML markup into a PDF document.", icon: Code2, category: "convert-to", available: true },
 
   // Convert FROM PDF
   { slug: "pdf-to-jpg", name: "PDF to JPG", description: "Extract pages as JPG images.", icon: FileImage, category: "convert-from", available: true },
+  { slug: "pdf-to-png", name: "PDF to PNG", description: "Render each page as a PNG image.", icon: Images, category: "convert-from", available: true },
   { slug: "pdf-to-word", name: "PDF to Word", description: "Convert PDFs to editable DOCX.", icon: FileDown, category: "convert-from", available: true },
   { slug: "pdf-to-powerpoint", name: "PDF to PowerPoint", description: "Convert PDFs to PPTX slides.", icon: FileUp, category: "convert-from", available: true },
   { slug: "pdf-to-excel", name: "PDF to Excel", description: "Pull data straight from PDFs into Excel.", icon: FileSpreadsheet, category: "convert-from", available: true },
@@ -51,6 +57,9 @@ export const tools: Tool[] = [
   // Edit
   { slug: "edit-pdf", name: "Edit PDF", description: "Add text and annotations to your PDF.", icon: PenLine, category: "edit", available: true },
   { slug: "watermark-pdf", name: "Watermark", description: "Stamp text over every page of your PDF.", icon: Stamp, category: "edit", available: true },
+  { slug: "page-numbers", name: "Page Numbers", description: "Add page numbers anywhere on your PDF.", icon: Hash, category: "edit", available: true },
+  { slug: "crop-pdf", name: "Crop PDF", description: "Trim margins from every page.", icon: Crop, category: "edit", available: true },
+  { slug: "sign-pdf", name: "Sign PDF", description: "Draw a signature and place it on a page.", icon: Signature, category: "edit", available: true },
 
   // Security
   { slug: "protect-pdf", name: "Protect PDF", description: "Encrypt PDFs with a password (AES-256).", icon: Lock, category: "security", available: true },
