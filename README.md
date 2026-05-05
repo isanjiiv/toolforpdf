@@ -1,6 +1,6 @@
 # ToolForPDF 📄
 
-<p align="center">
+<p align="left">
   <a href="https://toolforpdf.lovable.app/">
     <img src="https://toolforpdf.lovable.app/assets/app-icon-h8Kzsj_P.png" 
          alt="PDF Tool Logo" 
@@ -8,9 +8,7 @@
   </a>
 </p>
 
-<p align="center">
-  <a href="https://toolforpdf.lovable.app/"><b>PDF Tool App</b></a>
-</p>
+
 
 # [Live Site ]( https://toolforpdf.lovable.app/)
 
