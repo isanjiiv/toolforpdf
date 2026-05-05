@@ -1,7 +1,16 @@
 # ToolForPDF 📄
 
-![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)
-> A fast, modern, and user-friendly web application for all your PDF manipulation needs.
+<p align="center">
+  <a href="https://toolforpdf.lovable.app/">
+    <img src="https://toolforpdf.lovable.app/assets/app-icon-h8Kzsj_P.png" 
+         alt="PDF Tool Logo" 
+         width="120">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://toolforpdf.lovable.app/"><b>PDF Tool App</b></a>
+</p>
 
 # [Live Site ]( https://toolforpdf.lovable.app/)
 
